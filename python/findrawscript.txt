@@ -1,0 +1,4 @@
+piirrä pieni punainen ympyrä
+piirrä suuri keltainen neliö
+siirrä pientä punaista ympyrää
+poista se
