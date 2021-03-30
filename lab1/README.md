@@ -6,15 +6,17 @@ The assignments are submitted via Canvas.
 
 ## Chapter 1: explore the parallel UD treebank (PUD)
 
-1. Go to https://universaldependencies.org/ and download Version 2.5 treebanks
+1. Go to https://universaldependencies.org/ and download Version 2.7 treebanks
 2. Look up the Parallel UD treebanks for those 19 languages that have it. They are named e.g. UD_English-PUD/
 3. Select a language to compare with English.
-4. Make statistics about the frequencies of POS tags and dependency labels in your language compared with English.
-  For instance, the top-10 tags/labels and their number of occurrences.
+4. Make statistics about the frequencies of POS tags and dependency
+  labels in your language compared with English: find the top-20 tags/labels and their number of occurrences.
   What does this tell you about the language?
-5. Convert 2x2 tree from CoNLL format to graphical tree by hand, on paper.
-  Select a short English tree and its translation.
-  Then select a long English tree and its translation.
+  (This can be done with shell or Python programming or with the gf-ud tool.)
+5. Convert the following four trees from CoNLL format to graphical
+trees by hand, on paper.
+- a short English tree (5-10 words, of your choice) and its translation.
+- a long English tree (>25 words) and its translation.
 6. Draw word alignments for some non-trivial example in the PUD treebank, on paper.
   Use the same trees as in the previous question.
   What can you say about the syntactic differences between the languages?
@@ -29,6 +31,7 @@ The assignments are submitted via Canvas.
 ## Chapter 3: UD syntax analysis
 
 Take a bilingual corpus with English and your own language, and annotate with UD.
+The English text is given in the file `comp-syntax-corpus-english.txt` in this directory.
 The UD annotation that you produce manually can be simplified CoNLL, with just the fields
 
 `position word postag head label`
@@ -48,10 +51,10 @@ expands to
 `7       world   _       NOUN    _       _       4       nmod    _       _`
 
 (Unfortunately, the tabs are not visible in the md output.)
+The conversion to full CoNLL can be done using Python or `gf-ud reduced2conll`
 
 Once you have full CoNLL, you can use for instance the gfud tool to visualize it.
 
-The corpus is given in the file comp-syntax-corpus-english.txt in this directory.
 Your task is to
 1. write an English CoNLL file analysing this corpus
 2. translate the corpus to your language
