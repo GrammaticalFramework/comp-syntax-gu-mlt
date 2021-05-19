@@ -1,11 +1,15 @@
-concrete DoctorRGLEng of Doctor =
+--# -path=.:../abstract:../english:../api
+
+-- model implementation using Mini RGL
+
+concrete DoctorMiniEng of Doctor =
   open
-    SyntaxEng,
-    ParadigmsEng,
+    MiniSyntaxEng,
+    MiniParadigmsEng,
     Prelude
   in {
 
--- application using standard RGL
+-- application using your own Mini* modules
 
 lincat
   Phrase = Utt ;
@@ -100,7 +104,7 @@ lin
   drugsSubstance = mkNP aPl_Det (mkN "drug") ;
 
 oper
-  pAdv : Str -> Adv = ParadigmsEng.mkAdv ;
+  pAdv : Str -> Adv = MiniParadigmsEng.mkAdv ;
 
   go_V = mkV "go" "went" "gone" ;
   stay_V = mkV "stay" ;
