@@ -54,3 +54,46 @@ Your first approximation can be just to copy it and change the words.
 *To deliver* (but only if you select this assignment): file DoctorX.gf for your language X.
 
 *Deadline*: until the end of the course.
+
+
+## A method for testing your Micro and Mini grammar
+
+Since MicroLang is a proper part of the RGL, it can be easily implemented as an application grammar.
+How to do this is shown in `grammar/functor/`, where the implementation consists of two files:
+- `MicroLangFunctor.gf` which is a generic implementation working for all RGL languages,
+- `MicroLangFunctorEng.gf` which is a *functor instantiation* for English, easily reproduciple for other languages than `Eng`.
+
+To use this for testing, you can take the following steps:
+
+1. Build a functor instantiation for your language by copying `MicroLangFunctorEng.gf` and changing `Eng` in the file name and inside the file to your language code.
+
+2. Use GF to create a testfile by random generation:
+```
+  $ echo "gr -number=1000 | l -tabtreebank" | gf english/MicroLangEng.gf functor/MicroLangFunctorEng.gf >test.tmp
+```
+
+3. Inspect the resulting file `test.tmp`.
+But you can also use Unix `cut` to create separate files for the two versions of the grammar and `diff` to compare them:
+```
+  $ cut -f2 test.tmp >test1.tmp
+  $ cut -f3 test.tmp >test2.tmp
+  $ diff test1.tmp test2.tmp
+
+  52c52
+  < the hot fire teachs her
+  ---
+  > the hot fire teaches her
+  69c69
+  < the man teachs the apples
+  ---
+  > the man teaches the apples
+  122c122
+  ```
+As seen from the result in this case, our implementation has a wrong inflection of the verb "teach".
+
+The Mini grammar can be tested in the same way, by building a reference implementation using the functor in `functor/`.
+
+
+
+
+
