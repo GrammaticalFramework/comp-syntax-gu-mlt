@@ -15,12 +15,13 @@ abstract Foods = {
     
   fun
     Pred : Item -> Quality -> Comment ;       -- (this pizza) is (very warm)
+    PredNeg : Item -> Quality -> Comment ;    -- (this pizza) is not (very warm)
     This, That, These, Those : Kind -> Item ; -- this|that|these|those (pizza|pizzas) 
     Mod : Quality -> Kind -> Kind ;           -- (Italian) (pizza)
     Very : Quality -> Quality ;               -- very (Italian)
 
     Wine, Cheese, Fish, Pizza : Kind ;
 
-    Good, Fresh, Warm, Italian, 
+    Fresh, Warm, Italian, 
       Expensive, Delicious, Boring : Quality ;
 }
