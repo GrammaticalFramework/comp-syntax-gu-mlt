@@ -4,9 +4,9 @@
 import pgf
 
 # change these three to translate with other grammars and languages
-absmodule = "MiniLang"
+absmodule = "MicroLang"
 fromname  = absmodule + "Eng"
-toname    = absmodule + "Swe"
+toname    = absmodule + "FunctorSwe"
 
 def main():
   # read in the grammar, set up to and from languages

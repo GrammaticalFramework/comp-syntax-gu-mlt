@@ -30,7 +30,7 @@ A minimal translator can be found in
 
 [`minitranslator.py`](./minitranslator.py)
 
-This program reads one line of input and translates it from English to Swedish by using `MiniGrammar.pgf`. Example:
+This program reads one line of input and translates it from English to Swedish by using `MicroGrammar.pgf`. Example:
 ```
 $ echo "the cat is black" | python3 minitranslator.py
 katten är svart
