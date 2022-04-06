@@ -6,13 +6,13 @@ The assignments are submitted via Canvas.
 
 ## Chapter 1: explore the parallel UD treebank (PUD)
 
-1. Go to https://universaldependencies.org/ and download Version 2.7 treebanks
-2. Look up the Parallel UD treebanks for those 19 languages that have it. They are named e.g. UD_English-PUD/
+1. Go to https://universaldependencies.org/ and download Version 2.7+ treebanks
+2. Look up the Parallel UD treebanks for those 21 languages that have it. They are named e.g. `UD_English-PUD/`
 3. Select a language to compare with English.
 4. Make statistics about the frequencies of POS tags and dependency
   labels in your language compared with English: find the top-20 tags/labels and their number of occurrences.
   What does this tell you about the language?
-  (This can be done with shell or Python programming or with the gf-ud tool.)
+  (This can be done with shell or Python programming or with the gf-ud tool, which is available on the eduserv server. In Python, you can for example use the [conllu library](https://github.com/EmilStenstrom/conllu))
 5. Convert the following four trees from CoNLL format to graphical
 trees by hand, on paper.
 - a short English tree (5-10 words, of your choice) and its translation.
