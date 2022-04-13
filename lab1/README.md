@@ -39,7 +39,7 @@ Your task is to
 3. write a CoNLL file analysing your translation
 
 The corpus is a combination of different sources, including the Parallel UD treebank (PUD).
-If you want to cheat - or just check your own answer - you can look for those sentences in the official PUD.
+If you want to cheat - or just check your own answer - you can look for those sentences in the official PUD. You can also compare your analyses with those of an automatic parser, such as [UDPipe](https://lindat.mff.cuni.cz/services/udpipe/), which you can try directly from your browser. These automatic analyses must of course be taken with a grain of salt.
 
 The first 12 sentences are POS-tagged, with each word having the form
 
