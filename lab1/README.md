@@ -85,29 +85,24 @@ You will need Haskell and GF libraries to build gfud, and LaTeX to show the pdf.
 
 ## Chapter 4: phrase structure analysis
 
-1. Construct phrase structure trees for some of the sentences in the corpus used in Chapter 3, both for English and your chosen language.
+### Prerequisites: get `gf-ud` to work
+There are multiple ways to use `gf-ud`:
+- using the version that is installed on eduserv
+- installing a pre-compiled executable, available for Mac and Ubuntu machines at http://www.grammaticalframework.org/~aarne/software/
+- compiling the source code, available at https://github.com/GrammaticalFramework/gf-ud. `gf-ud` can be built:
+  - with `make` provided that you have the GHC Haskell compiler and the gf-core libraries (available at https://github.com/GrammaticalFramework/gf-core) installed 
+  - with the Haskell Stack tool, by running `stack install`. This will install all the necessary dependency automatically.
 
-2. Test the grammar
+### Tasks
+1. Construct (by hand) phrase structure trees for some of the sentences in the corpus used in Chapter 3, both for English and your chosen language. 
 
-https://github.com/GrammaticalFramework/gf-ud/blob/master/grammars/English.dbnf
+2. Test the grammar at
 
-on last week's corpus, both for English and your own language.
+   https://github.com/GrammaticalFramework/gf-ud/blob/master/grammars/English.dbnf
 
-3. Modify the grammar to suit your language and test it on some of the UD treebanks by using `gf-ud eval`.
+   on last week's corpus, both for English and your own language. 
+   In practice, this means:
+     - running `gf-ud`'s `dbnf` command on (possibly POS-tagged) versions of the sentences in Chapter 3's corpus.
+     - comparing the CoNNL-U and parse trees obtained in this way with, respectively, your hand-drawn parse trees and the CoNNL-U trees from Chapter 3. Parse tree comparison can be qualitative, while CoNNL-U trees are to be compared quantitatively via `gf-ud eval`.
 
-
-The gf-ud program can be found in executable versions (once gunzipped) in
-
-http://www.grammaticalframework.org/~aarne/software/
-
-The source code of gf-ud can be found in
-
-https://github.com/GrammaticalFramework/gf-ud
-
-It can be built with `make` if you have Haskell and also have built the gf-core libraries:
-
-https://github.com/GrammaticalFramework/gf-core
-
-This will not be needed if you can use one of the ready-made libraries.
-
-
+3. Modify the grammar to suit your language and test it on some of the UD treebanks by using `gf-ud eval`. Try to obtain a `udScore` above 0.60. You are welcome to explain the changes you make.
