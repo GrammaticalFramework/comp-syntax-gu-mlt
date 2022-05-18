@@ -25,6 +25,7 @@ lin
       mkUtt (mkImp (mkVP (mkVP (mkV2 "flytta") object) place)) ;
       
   shapeObject size colour shape =
+----     mkCN size (mkCN colour shape) ;
     G.AdjCN size (G.AdjCN colour shape ** {isMod = colour.isAdj})
       ** {isMod = orB size.isAdj colour.isAdj} ;
       

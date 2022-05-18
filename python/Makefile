@@ -8,7 +8,7 @@ query:
 	gf -make QueryEng.gf QuerySwe.gf
 
 draw:
-	gf -make DrawEng.gf DrawSwe.gf DrawFin.gf
+	gf -make DrawEng.gf DrawSwe.gf DrawFin.gf DrawGer.gf
 
 
 
