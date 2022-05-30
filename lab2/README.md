@@ -46,6 +46,7 @@ But use this implementation only as a reference with which to test your own one:
 
 ## Session 8
 
+### Alternative 1: Doctor
 1. Implement a simple application grammar, application/Doctor.gf.
 This can be be done either by using your own MiniResource or the standard resource.
 There are two versions of English implementation to support this.
@@ -54,6 +55,18 @@ Your first approximation can be just to copy it and change the words.
 *To deliver* (but only if you select this assignment): file DoctorX.gf for your language X.
 
 *Deadline*: until the end of the course.
+
+
+### Alternative 2: Abstract Wikipedia
+The task is to add a language to the grammar in `wikipedia/`. This involves
+- finding country and other names to implement `CountryNames`, by querying Wikidata labels and using `extract_names.py`;
+- writing the concrete syntax modules for `Facts`, `CountryNames`, and `Countries` for this language.
+
+
+More information on the task can be find in
+- the lecture notes: https://github.com/aarneranta/NLG-examples/blob/main/doc/gf-nlg.pdf 
+- the slides shown on lecture 9: https://docs.google.com/presentation/d/1gQTI_vv6anBCaUCJujGxJZbmZBKuXPN_rRUYRgdvXio/edit?usp=sharing
+- the GF Summer School film: https://www.youtube.com/watch?v=gX_y2BqJ0w0&list=PL7VkoRLnYYP6EZngakW7lNNCTjfC93uh0&index=15 
 
 
 ## A method for testing your Micro and Mini grammar
