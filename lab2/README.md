@@ -30,6 +30,29 @@ The abstract syntax is given in the subdirectory grammars/abstract/
 
 ## Session 8
 
+1. Try out the applications in `../python` and read its README carefully.
+2. Add a concrete syntax for your language to one of the grammars
+in `../python/`, either `Query` or `Draw`.
+The simplest way to do this
+is first to copy the `Eng` grammar and then to change the words; the
+syntax may work well as it is. Even though it can be a bit unnatural,
+it should be in a wide sense natural.
+3. Compile the grammar with `gf -make Query???.gf` so that your grammar
+gets included (the same for `Draw`).
+4. Generate phrases in GF by first importing your pgf file and then
+   issuing the command `gt | l -treebank`; fix your grammar if it looks
+   too bad.
+5. Test the corresponding Python application with your language.
+
+*To deliver*: your grammar module.
+
+*Deadline*: 31 May. Demo your grammars (both Micro and this one) at
+ the last lecture of the course!
+
+### Alternative from 2022
+
+*If you want to do this instead of the current Session 8, contact Aarne first*
+
 The task is to add a language to the grammar in `wikipedia/`. Mode details coming soon.
 
 More information on the task can be find in
