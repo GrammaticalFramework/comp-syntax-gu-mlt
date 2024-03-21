@@ -42,8 +42,8 @@ If you want to cheat - or just check your own answer - you can look for those se
 
 ### Option 2: Swedish data
 The Swedish text is given in the file [`comp-syntax-corpus-swedish.txt`](comp-syntax-corpus-swedish.txt) in this directory.
-It consists of teacher-corrected sentences from the [Swedish Learner Language (SweLL) corpus](https://spraakbanken.gu.se/en/resources/swell-gold), which is currently being annotated in UD for the first time. 
-In this case, there is no "gold standard" to check your answers against, but by choosing this corpus you will directly contribute to an ongoing annotation project. '
+It consists of teacher-corrected sentences from the [Swedish Learner Language (SweLL) corpus](https://spraakbanken.gu.se/en/resources/swell-gold)[^1], which is currently being annotated in UD for the first time. 
+In this case, there is no "gold standard" to check your answers against, but by choosing this corpus you will directly contribute to an ongoing annotation effort.
 Of course, you can still compare your solutions with [UDPipe](https://lindat.mff.cuni.cz/services/udpipe/)'s automatic analyses.
 
 In both corpora, the first few sentences are POS-tagged, with each word having the form
@@ -116,3 +116,5 @@ There are multiple ways to use `gf-ud`:
      - comparing the CoNNL-U and parse trees obtained in this way with, respectively, your hand-drawn parse trees and the CoNNL-U trees from Chapter 3. Parse tree comparison can be qualitative, while CoNNL-U trees are to be compared quantitatively via `gf-ud eval`.
 
 3. Modify the grammar to suit your language and test it on some of the UD treebanks by using `gf-ud eval`. Try to obtain a `udScore` above 0.60. You are welcome to explain the changes you make.
+
+[^1]: to be precise, the sentences you will use have been extracted from [DaLAJ-GED-SuperLim 2.0](https://spraakbanken.gu.se/en/resources/dalaj-ged-superlim), a publicly available spinoff of the main SweLL corpus.
