@@ -6,18 +6,14 @@ The assignments are submitted via Canvas.
 
 ## Chapter 1: explore the parallel UD treebank (PUD)
 
-1. Go to https://universaldependencies.org/ and download Version 2.7+ treebanks
+1. Go to [universaldependencies.org](https://universaldependencies.org/) and download Version 2.7+ treebanks
 2. Look up the Parallel UD treebanks for those 21 languages that have it. They are named e.g. `UD_English-PUD/`
 3. Select a language to compare with English.
-4. Make statistics about the frequencies of POS tags and dependency
-  labels in your language compared with English: find the top-20 tags/labels and their number of occurrences.
-  What does this tell you about the language?
-  (This can be done with shell or Python programming or with the gf-ud tool, which is available on the eduserv server. In Python, you can for example use the [conllu library](https://github.com/EmilStenstrom/conllu))
-5. Convert the following four trees from CoNLL format to graphical
-trees by hand, on paper.
-- a short English tree (5-10 words, of your choice) and its translation.
-- a long English tree (>25 words) and its translation.
-6. Draw word alignments for some non-trivial example in the PUD treebank, on paper.
+4. Make statistics about the frequencies of POS tags and dependency labels in your language compared with English: find the top-20 tags/labels and their number of occurrences. What does this tell you about the language? (This can be done with shell or Python programming or, more easily, with the [deptreepy](https://github.com/aarneranta/deptreepy/) or [gf-ud](https://github.com/grammaticalFramework/gf-ud) tools. The latter is also available on the eduserv server.) 
+5. Convert the following four trees from CoNLL-U format to graphical trees by hand, on paper.
+   - a short English tree (5-10 words, of your choice) and its translation.
+   - a long English tree (>25 words) and its translation.
+1. Draw word alignments for some non-trivial example in the PUD treebank, on paper.
   Use the same trees as in the previous question.
   What can you say about the syntactic differences between the languages?
 
@@ -30,18 +26,27 @@ trees by hand, on paper.
 
 ## Chapter 3: UD syntax analysis
 
-In this lab, you will annotate a bilingual corpus with English and your own language with UD.
-The English text is given in the file `comp-syntax-corpus-english.txt` in this directory.
+In this lab, you will annotate a bilingual corpus with UD.
+You can choose between starting with an English corpus and translate it to a language of your choice, or start with a Swedish corpus to translate into English.
 
-Your task is to
-1. write an English CoNLL file analysing this corpus
-2. translate the corpus to your language
+Your task is to:
+
+1. write an CoNLL file analysing your chosen corpus
+2. translate it
 3. write a CoNLL file analysing your translation
 
+### Option 1: English data
+The English text is given in the file [`comp-syntax-corpus-english.txt`](comp-syntax-corpus-english.txt) in this directory.
 The corpus is a combination of different sources, including the Parallel UD treebank (PUD).
 If you want to cheat - or just check your own answer - you can look for those sentences in the official PUD. You can also compare your analyses with those of an automatic parser, such as [UDPipe](https://lindat.mff.cuni.cz/services/udpipe/), which you can try directly from your browser. These automatic analyses must of course be taken with a grain of salt.
 
-The first 12 sentences are POS-tagged, with each word having the form
+### Option 2: Swedish data
+The Swedish text is given in the file [`comp-syntax-corpus-swedish.txt`](comp-syntax-corpus-swedish.txt) in this directory.
+It consists of teacher-corrected sentences from the [Swedish Learner Language (SweLL) corpus](https://spraakbanken.gu.se/en/resources/swell-gold), which is currently being annotated in UD for the first time. 
+In this case, there is no "gold standard" to check your answers against, but by choosing this corpus you will directly contribute to an ongoing annotation project. '
+Of course, you can still compare your solutions with [UDPipe](https://lindat.mff.cuni.cz/services/udpipe/)'s automatic analyses.
+
+In both corpora, the first few sentences are POS-tagged, with each word having the form
 
 `word:<POS>`
 
@@ -68,16 +73,27 @@ expands to
 (Unfortunately, the tabs are not visible in the md output.)
 The conversion to full CoNLL can be done using Python or `gf-ud reduced2conll` (available on eduserv) or with [this script](https://gist.github.com/harisont/612a87d20f729aa3411041f873367fa2).
 
-Once you have full CoNLL, you can use for instance the gf-ud tool or [the online CoNNL-U viewer](https://universaldependencies.org/conllu_viewer.html) to visualize it.
+Once you have full CoNLL, you can use [deptreepy](https://github.com/aarneranta/deptreepy/), [gf-ud](https://github.com/grammaticalFramework/gf-ud) or [the online CoNNL-U viewer](https://universaldependencies.org/conllu_viewer.html) to visualize it.
 
-If you use the gf-ud tool, you will need to issue the command
+With deptreepy, you will need to issue the command
+
+`cat my-file.conllu | python deptreepy.py visualize_conllu > my-file.html`
+
+which creates an HTML file you can open in you web browser.
+
+If you use the gf-ud tool, the command is
 
 `cat my-file.conllu | ./gf-ud conll2pdf`
 
-It is possible that you won't be able to visualize the trees directly on eduserv.
-Building gf-ud and running this command on your machine requires Haskell and the GF libraries, as well as LaTeX to show the pdf output.
+which generates a PDF. However, this does not support all foreign characters.
 
-## Chapter 4: phrase structure analysis
+(It is possible that you won't be able to visualize the trees directly on eduserv.
+Building gf-ud and running this command on your machine requires Haskell and the GF libraries, as well as LaTeX to show the pdf output.)
+
+## (Chapter 4: phrase structure analysis)
+
+> __NOTE:__ chapter 4 is __not__ required in the 2024 edition of the course. 
+> You are of course welcome to try out these exercises, but they will not be graded.
 
 ### Prerequisites: get `gf-ud` to work
 There are multiple ways to use `gf-ud`:
