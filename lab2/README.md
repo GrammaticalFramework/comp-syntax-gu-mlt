@@ -5,30 +5,21 @@ Therefore we will structure it according to the exercise sessions
 rather than chapters.
 The abstract syntax is given in the subdirectory grammars/abstract/
 
-## Session 5
+## After lecture 6
 
 1. Design a morphology for the main lexical types (N, A, V) with parameters and a couple of paradigms.
 2. Test it by implementing the lexicon in the MicroLang module. You need to define lincat N,A,V,V2 as well as the paradigms in MicroResource.
 
 *To deliver*: the lexicon part of files MicroGrammarX.gf and MicroResourceX.gf for your language of choice X. Follow the structure of MicroGrammarEng and MicroResourceEng when preparing these.
 
-## Session 6
+## After lecture 7
 
 1. Define the linearization types of main phrasal categories - the remaining categories in MicroLang.
 2. Define the rest of the linearization rules in MicroLang.
 
 *To deliver*: MicroLangX and MicroResourceX for your language of choice, with the lexicon part from Session 5 completed with syntax part. 
 
-## Session 7
-
-1. Add concrete UD labels.
-2. Generate a synthetic UD treebank by using gfud. 
-
-*To deliver* for your language X, file MicroLangX.labels and a treebank in CoNLL format with 20 trees.
-
-*Deadline*: until the end of the course.
-
-## Session 8
+## After lecture 9
 
 1. Try out the applications in `../python` and read its README carefully.
 2. Add a concrete syntax for your language to one of the grammars
@@ -48,17 +39,6 @@ gets included (the same for `Draw`).
 
 *Deadline*: 31 May. Demo your grammars (both Micro and this one) at
  the last lecture of the course!
-
-### Alternative from 2022
-
-*If you want to do this instead of the current Session 8, contact Aarne first*
-
-The task is to add a language to the grammar in `wikipedia/`. Mode details coming soon.
-
-More information on the task can be find in
-- the lecture notes: https://github.com/aarneranta/NLG-examples/blob/main/doc/gf-nlg.pdf 
-- the slides shown on lecture 9: https://docs.google.com/presentation/d/1gQTI_vv6anBCaUCJujGxJZbmZBKuXPN_rRUYRgdvXio/edit?usp=sharing
-- the GF Summer School film: https://www.youtube.com/watch?v=gX_y2BqJ0w0&list=PL7VkoRLnYYP6EZngakW7lNNCTjfC93uh0&index=15 
 
 
 ## A method for testing your Micro grammar
