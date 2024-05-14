@@ -69,9 +69,9 @@ def shape(obj):
     factor = 1
     
   midx,midy = midpoint
-  x1 = midx + randrange(-midx,midx,1)
-  y1 = midy + randrange(-midy,midy,1)
-  r  = factor * randrange(minradius, maxradius, 1)
+  x1 = midx + randrange(int(-midx),int(midx),1)
+  y1 = midy + randrange(int(-midy),int(midy),1)
+  r  = factor * randrange(int(minradius), int(maxradius), 1)
   d  = 2 * r
   x2 = x1 + d
   y2 = y1 + d
