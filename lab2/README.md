@@ -19,7 +19,7 @@ The abstract syntax is given in the subdirectory grammars/abstract/
 
 *To deliver*: MicroLangX and MicroResourceX for your language of choice, with the lexicon part from Session 5 completed with syntax part. 
 
-## After lecture 9
+## After lecture 8
 
 1. Try out the applications in `../python` and read its README carefully.
 2. Add a concrete syntax for your language to one of the grammars
@@ -35,9 +35,12 @@ gets included (the same for `Draw`).
    too bad.
 5. Test the corresponding Python application with your language.
 
+The Python code with embedded GF grammars will be explained in a greater 
+detail in Lecture 9.
+
 *To deliver*: your grammar module.
 
-*Deadline*: 31 May. Demo your grammars (both Micro and this one) at
+*Deadline*: 29 May 2024. Demo your grammars (both Micro and this one) at
  the last lecture of the course!
 
 
