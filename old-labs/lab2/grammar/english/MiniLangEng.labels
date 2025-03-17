@@ -1,0 +1,6 @@
+UseCl, UseQCl, ImpVP {"not"} PART advmod head
+UseComp {"is","are","am","was","were","been","be"} AUX cop head
+PredVP, QuestVP {"has","had","have","do","does"} AUX aux head
+ImpVP {"do"} AUX aux head
+ComplVS {"that"} SCONJ mark ccomp
+ComplVV {"to"} PART mark xcomp

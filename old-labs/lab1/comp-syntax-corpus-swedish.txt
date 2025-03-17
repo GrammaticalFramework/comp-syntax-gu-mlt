@@ -1,0 +1,24 @@
+Jag:<PRON> tycker:<VERB> att:<SCONJ> du:<PRON> ska:<AUX> börja:<VERB> med:<ADP> en:<DET> språkkurs:<NOUN>.:<PUNCT>
+Flerspråkighet:<NOUN> gynnar:<VERB> oss:<PRON> även:<ADV> på:<ADP> arbetsmarknaden:<NOUN>.:<PUNCT>
+Språket:<NOUN> är:<AUX> lätt:<ADJ> och:<CCONJ> jag:<PRON> kan:<AUX> läsa:<VERB> utan:<ADP> något:<DET> problem:<PRON>.:<PUNCT>
+Man:<PRON> känner:<VERB> sig:<PRON> ensam:<ADJ> när:<SCONJ> man:<PRON> inte:<PART> kan:<AUX> prata:<VERB> språket:<NOUN> bra:<ADV>.:<PUNCT>
+Det:<PRON> kan:<AUX> vara:<AUX> kroppsspråk:<NOUN> men:<CCONJ> främst:<ADV> sker:<VERB> det:<PRON> genom:<ADP> talet:<NOUN>.
+Språket:<NOUN> är:<AUX> nyckeln:<NOUN> till:<ADP> alla:<DET> låsta:<ADJ> dörrar:<NOUN>,:<PUNCT> har:<AUX> vi:<PRON> hört:<VERB> flera:<ADJ> gånger:<NOUN>.:<PUNCT>
+Att:<PART> kunna:<VERB> ett:<DET> språk:<NOUN> är:<AUX> en:<DET> av:<ADP> de:<DET> viktigaste:<ADJ> och:<CCONJ> värdefullaste:<ADJ> egenskaper:<NOUN> en:<DET> människa:<NOUN> kan:<AUX> ha:<VERB> så:<SCONJ> det:<PRON> är:<AUX> värt:<ADJ> mer:<ADV> än:<ADP> vad:<PRON> man:<PRON> tror:<VERB>.:<PUNCT>
+Med:<ADP> andra:<ADJ> ord:<NOUN>,:<PUNCT> språket:<NOUN> är:<AUX> nyckeln:<NOUN> till:<ADP> alla:<DET> låsta:<ADJ> dörrar:<NOUN>,:<PUNCT> men:<CCONJ> det:<PRON> finns:<VERB> viktigare:<ADJ> saker:<NOUN> att:<PART> satsa:<VERB> på:<ADP> som:<PRON> jag:<PRON> kommer:<AUX> att:<PART> nämna:<VERB> längre:<ADV> ner:<ADV>.:<PUNCT>
+Han:<PRON> kom:<VERB> till:<ADP> Sverige:<PROPN> för:<ADP> 4:<NUM> år:<NOUN> sedan:<ADV>,:<PUNCT> han:<PRON> kunde:<AUX> inte:<PART> tala:<VERB> svenska:<ADJ> språket:<NOUN>,<PUNCT> ingen:<DET> engelska:<NOUN>,:<PUNCT> han:<PRON> kunde:<AUX> i:<ADP> princip:<NOUN> inte:<PART> kommunicera:<VERB> med:<ADP> någon:<PRON> här<ADV>.:<PUNCT>
+För:<ADP> det:<DET> första:<ADJ> hänger:<VERB> språket:<NOUN> ihop:<ADV> med:<ADP> tillhörighet:<NOUN>,:<PUNCT> särskilt:<ADV> för:<ADP> de:<DET> nya:<ADJ> invandrare:<NOUN> som:<PRON> har:<AUX> bestämt:<VERB> sig:<PRON> för:<ADP> att:<PART> flytta:<VERB> och:<CCONJ> bosätta:<VERB> sig:<PRON> i:<ADP> Sverige:<PROPN>.:<PUNCT>
+Om:<SCONJ> alla:<PRON> hade:<AUX> talat:<VERB> samma:<DET> språk:<NOUN> hade:<AUX> det:<PRON> förmodligen:<ADV> inte:<PART> funnits:<VERB> något:<DET> utanförskap:<NOUN>,:<PUNCT> utan:<CCONJ> man:<PRON> hade:<AUX> fått:<VERB> en:<DET> typ:<NOUN> av:<ADP> gemenskap:<NOUN> där:<ADV> man:<PRON> delar:<VERB> samma:<DET> kultur:<NOUN>.:<PUNCT>
+Att:<PART> lära:<VERB> sig:<PRON> ett:<DET> språk:<NOUN> är:<AUX> väldigt:<ADV> svårt:<ADJ>,:<PUNCT> speciellt:<ADV> för:<ADP> vuxna:<ADJ> människor:<NOUN>,:<PUNCT> och:<CCONJ> eftersom:<SCONJ> majoritetsspråket:<NOUN> blir:<VERB> en:<DET> viktig:<ADJ> del:<NOUN> i:<ADP> en:<DET> persons:<NOUN> liv:<NOUN> räcker:<VERB> det:<PRON> inte:<PART> att:<PART> tala:<VERB> det:<PRON> på:<ADP> söndagar:<NOUN> utan:<CCONJ> det:<PRON> måste:<AUX> läras:<VERB> in:<PART> som:<SCONJ> ett:<DET> modersmål:<NOUN>,:<PUNCT> vilket:<PRON> finansieras:<VERB> av:<ADP> oss:<PRON> skattebetalare:<NOUN>.:<PUNCT>
+Avslutningsvis så vill jag förmedla att vi bör rädda världen innan språken.
+Språket är ganska enkelt, och det är lätt att förstå vad romanen handlar om.
+Det är även kostsamt för staten att se till att dessa minoritetsspråk lever kvar.
+Låt mig säga att det är inte för sent att rädda de små språken, vi måste ta steget nu.
+Att hålla dessa minoritetsspråk vid liv är både slöseri med tid och mycket ekonomiskt krävande.
+Jag tackar alla lärare på Sfi som hjälper oss för att vi ska kunna bli bättre på svenska språket.
+Språk skapades för flera tusen år sedan och vissa språk har tynat bort medan några nya har skapats.
+Samhället behöver flerspråkiga och vägen till kommunikation och till att begripa andras kulturer är ett språk.
+Om man kan fler språk har man fler möjligheter att använda sig av dem vilket leder till utveckling.
+Därför tycker jag att vi bör införa ett förbud mot främmande språk i statliga myndigheter och föreningar.
+Men jag anser först och främst att språket är som själen, det som ger oss livskraft, säregenhet och karaktär.
+På Sveriges riksdags hemsida kan man läsa om hur Sverige bidrar med att skydda dessa språk med hjälp av statligt bidrag.
