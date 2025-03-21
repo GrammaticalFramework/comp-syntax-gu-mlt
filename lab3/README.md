@@ -113,4 +113,4 @@ and use the `machamp/scripts/misc/conll18_ud_eval.py` script to evaluate the sys
 python conll18_ud_eval.py PATH-TO-YOUR-PART1-TREEBANK predictions/OUTPUT-FILE-NAME.conllu
 ```
 
-Submit the training logs, the predictions and the output of `conll18_ud_eval.py`, along with a short text summarizing your considerations on the performance of the parser.
+On Canvas, submit the training logs, the predictions and the output of `conll18_ud_eval.py`, along with a short text summarizing your considerations on the performance of the parser.
