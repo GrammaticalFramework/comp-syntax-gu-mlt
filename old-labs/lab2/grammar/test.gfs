@@ -1,0 +1,8 @@
+gt -cat=N | l -list
+gt -cat=A | l -list
+gt -cat=V | l -list
+gt -cat=V2 | l -list
+gt -cat=Pron | l -list
+gr -number=21 | l -treebank
+pg -missing
+

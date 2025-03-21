@@ -1,0 +1,37 @@
+-- a tiny context-free grammar for English
+-- subcategories with _ in them are an unscalable hack
+
+-- combination rules
+
+S ::= NP_subj_3 VP_3 | NP_subj VP | S Adv ;
+
+VP ::= V2 NP_obj ;
+VP_3 ::= V2_3 NP_obj ;
+
+NP_subj_3 ::= Det CN | Pron_subj_3 ;
+NP_subj ::= Pron_subj ;
+NP_obj ::= Det CN | Pron_obj ;
+
+CN ::= A N ;
+
+Adv ::= Subj S ;
+
+-- structural words
+
+Det ::= "the" ;
+
+Pron_subj ::= "we" ;
+Pron_obj ::= "us" ;
+
+Subj ::= "because" ;
+
+-- content words
+
+N ::= "cat" ;
+A ::= "black" ;
+V2_3 ::= "sees" ;
+V2 ::= "see" ;
+Adv ::= "now" ;
+
+
+
