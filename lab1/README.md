@@ -1,24 +1,18 @@
-# Lab 2: Multilingual generation and translation
+# Lab 1: Multilingual generation and translation
 
-This lab corresponds to Chapters 5 to 9 of the Notes, but follows them only loosely.
-Therefore we will structure it according to the exercise sessions
-rather than chapters.
+In this lab, you will implement the concrete syntax of a grammar for a language of your choice. 
+The abstract syntax is given in the directory [`../grammar/abstract/`](../grammar/abstract/) and an example concrete syntax for English can be found in [`../grammar/english/`](../grammar/english/).
 
-The abstract syntax is given in the subdirectory grammars/abstract/
+## Part 1: design the morphological types of the major parts of speech in your selected language
 1. Go to [universaldependencies.org](https://universaldependencies.org/) and download Version 2.7+ treebanks
 2. Look up the Parallel UD treebanks for those 21 languages that have it. They are named e.g. `UD_English-PUD/`
 3. Select a language to compare with English.
 4. Make statistics about the frequencies of POS tags and dependency labels in your language compared with English: find the top-20 tags/labels and their number of occurrences. What does this tell you about the language? (This can be done with shell or Python programming or, more easily, with the [deptreepy](https://github.com/aarneranta/deptreepy/) or [gf-ud](https://github.com/grammaticalFramework/gf-ud) tools. The latter is also available on the eduserv server.) 
 
-1. Draw word alignments for some non-trivial example in the PUD treebank, on paper.
-  Use the same trees as in the previous question.
-  What can you say about the syntactic differences between the languages?
-
-  ## Chapter 2: design the morpological types of the major parts of speech in your selected language
-
 1. It is enough to cover NOUN, ADJ, and VERB.
 2. Use a traditional grammar book or a Wikipedia article to identify the inflectional and inherent features.
 3. Then use data from PUD to check which morphological features actually occur in the treebank for that language. 
+
 ## After lecture 6
 
 1. Design a morphology for the main lexical types (N, A, V) with parameters and a couple of paradigms.
