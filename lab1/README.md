@@ -1,11 +1,11 @@
 # Lab 1: Multilingual generation and translation
 
 In this lab, you will implement the concrete syntax of a grammar for a language of your choice. 
-The abstract syntax is given in the directory [`../grammar/abstract/`](../grammar/abstract/) and an example concrete syntax for English can be found in [`../grammar/english/`](../grammar/english/).
+The abstract syntax is given in the directory [`grammar/abstract/`](grammar/abstract/) and an example concrete syntax for English can be found in [`grammar/english/`](grammar/english/).
 
 ## Part 1: setup and lexicon
-1. Create a subfolder in [`../grammar/`](../grammar/) for your language of choice
-2. Copy the contents of [`../grammar/english/`](../grammar/english/) to your new folder and apply the necessary renamings (i.e. replace all occurrences of `Eng` with the new language code)
+1. Create a subfolder in [`grammar/`](grammar/) for your language of choice
+2. Copy the contents of [`grammar/english/`](grammar/english/) to your new folder and apply the necessary renamings (i.e. replace all occurrences of `Eng` with the new language code)
 3. Translate the words in lexicon part of `MicroLangXxx`
 4. Test your new concrete syntax by generating a few random trees in the GF interpreter. When you linearize them, you should see sentences in a mixture of English and your chosen language. To do this you can use the commands
      - `i MicroLangXxx.gf` to [import](https://www.grammaticalframework.org/doc/gf-shell-reference.html#toc18) the grammar
