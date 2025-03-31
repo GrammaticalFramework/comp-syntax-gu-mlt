@@ -1,0 +1,14 @@
+S  ::= NP VP ;
+NP ::= Det CN ;
+NP ::= Pron ;
+CN ::= N ;
+CN ::= AP CN ;
+VP ::= V2 NP ;
+AP ::= A ;
+
+Det  ::= "the" ;
+Pron ::= "us" ;
+N    ::= "cat" ;
+A    ::= "black" ;
+V2   ::= "sees" ;
+
