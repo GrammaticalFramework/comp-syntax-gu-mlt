@@ -3,6 +3,11 @@
 In this lab, you will implement the concrete syntax of a grammar for a language of your choice. 
 The abstract syntax is given in the directory [`grammar/abstract/`](grammar/abstract/) and an example concrete syntax for English can be found in [`grammar/english/`](grammar/english/).
 
+You will need to install:
+
+- GF core and the RGL (see installation instructions [here](https://www.grammaticalframework.org/download/index-3.11.html)) 
+- the [language server for GF](https://github.com/anka-213/gf-lsp)
+
 ## Part 1: setup and lexicon
 1. Create a subfolder in [`grammar/`](grammar/) for your language of choice
 2. Copy the contents of [`grammar/english/`](grammar/english/) to your new folder and apply the necessary renamings (i.e. replace all occurrences of `Eng` with the new language code)
