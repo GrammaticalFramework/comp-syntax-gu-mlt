@@ -29,3 +29,15 @@ Experiments in GF:
 - https://cloud.grammaticalframework.org/minibar/minibar.html
 - Grammar: ResourceDemo, Startcat: S
 
+
+## Lecture 2
+
+Agreement, parameter definitions, variable and inherent features, linearization types
+
+[IntroEng.gf](lecture-02/InfroEng.gf)
+
+For you to do:
+- write a concrete syntax for some other language, carefully thinking about
+
+GF for ARM Mac (M1, M2, M3): https://www.grammaticalframework.org/~aarne/gf-mac.gz
+
