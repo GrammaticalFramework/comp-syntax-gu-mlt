@@ -41,3 +41,15 @@ For you to do:
 
 GF for ARM Mac (M1, M2, M3): https://www.grammaticalframework.org/~aarne/gf-mac.gz
 
+After download, open a terminal and do:
+```
+ mkdir tmp  # in your home directory
+ cd tmp
+ mv ~/Downloads/gf-mac.gz .
+ gunzip gf-mac.gz
+ mv gf-mac gf
+ chmod a+x gf
+ ./gf
+```
+You should now see the GF promt. Type 'help' to see if it works!
+
