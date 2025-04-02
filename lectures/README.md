@@ -53,3 +53,31 @@ After download, open a terminal and do:
 ```
 You should now see the GF promt. Type 'help' to see if it works!
 
+The next thing is to move it to a place where you can find it from anywhere in your system.
+One standard place is
+```
+  mv gf /usr/local/bin
+```
+If you get "permission denied", you will have to write
+```
+  sudo mv gf /usr/local/bin
+```
+and type your computer's password.
+
+Then you can try
+```
+  cd
+  gf
+```
+to verify that GF works in your home directory.
+
+After that, you can test it in the course GitHub directory
+```
+  cd comp-syntax-gu-mlt/lectures/lecture-02
+  gf
+  > import IntroEng.gf   # in GF
+```
+You can work here for a while.
+The next step will be to install the RGL, but this can wait a bit.
+The instructions in https://www.grammaticalframework.org/download/index-3.11.html should work even for the ARM Mac.
+
