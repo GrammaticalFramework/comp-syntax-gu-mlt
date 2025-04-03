@@ -39,19 +39,36 @@ Agreement, parameter definitions, variable and inherent features, linearization 
 For you to do:
 - write a concrete syntax for some other language, carefully thinking about
 
-GF for ARM Mac (M1, M2, M3): https://www.grammaticalframework.org/~aarne/gf-mac.gz
 
-After download, open a terminal and do:
+### Instructions for ARM Mac users
+
+The GF Download page contains a binary for the Mac with an Intel processor, but it will not work for newer Macs, which use an ARM Processor (called M1, M2, or M3 by Apple).
+
+We have therefore prepared a binary for these newer Macs.
+To download it, open a terminal and do:
 ```
- mkdir tmp  # in your home directory
- cd tmp
- mv ~/Downloads/gf-mac.gz .
+  cd             # go to your home directory
+  mkdir tmp      # if the directory tmp does not exist already
+  cd tmp
+  wget https://www.grammaticalframework.org/~aarne/gf-mac.gz
+```
+This is better than downloading via a browser, because your Mac OS may then block the use of the program as "unreliable".
+
+After download, stay in the terminal and do:
+```
  gunzip gf-mac.gz
  mv gf-mac gf
  chmod a+x gf
  ./gf
 ```
 You should now see the GF promt. Type 'help' to see if it works!
+
+Hint: if any of the terminal commands used above are unfamiliar to you, it is a good time to learn them now.
+They will be useful throughout your future career as a programmer!
+The readily available method is the `man` command, for instance,
+```
+  man gunzip
+```
 
 The next thing is to move it to a place where you can find it from anywhere in your system.
 One standard place is
