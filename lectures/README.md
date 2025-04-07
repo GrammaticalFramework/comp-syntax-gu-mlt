@@ -98,3 +98,33 @@ You can work here for a while.
 The next step will be to install the RGL, but this can wait a bit.
 The instructions in https://www.grammaticalframework.org/download/index-3.11.html should work even for the ARM Mac.
 
+
+## Lecture 3
+
+Course notes: Chapter 2, Chapter 5
+
+Analysing UD data with shell commands:
+```
+cat treebanks/UD_Swedish-Talbanken/sv_talbanken-ud-train.conllu | cut -f4 | grep -v "#" | sort
+cat treebanks/UD_Swedish-Talbanken/sv_talbanken-ud-train.conllu | cut -f4 | grep -v "#" | sort -u
+cat treebanks/UD_Swedish-Talbanken/sv_talbanken-ud-train.conllu | cut -f4 | grep -v "#" | sort -u | wc
+```
+Again, make sure to learn to use these shell commands!
+
+Adding deptreepy to the pipeline:
+```
+cat treebanks/UD_English-EWT/en_ewt-ud-train.conllu | ./deptreepy.py "statistics POS"
+cat treebanks/UD_English-EWT/en_ewt-ud-train.conllu | ./deptreepy.py "match_wordlines (POS X)"
+cat treebanks/UD_English-EWT/en_ewt-ud-train.conllu | ./deptreepy.py "statistics FEATS"
+cat treebanks/UD_English-EWT/en_ewt-ud-train.conllu | ./deptreepy.py "match_wordlines (POS NOUN) | statistics FEATS"
+```
+Download deptreepy and the UD treebanks, and do the same for other treebanks of other languages!
+
+Confirmed Swedish inflection table by looking up a word at https://svenska.se/ and also learn what is inherent and what is variable.
+
+Started MorphologyEng.gf and MorphologySwe.gf in lecture-03/.
+
+
+
+
+
