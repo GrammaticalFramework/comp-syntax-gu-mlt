@@ -17,12 +17,11 @@ You will need to install:
      - `gr | l` to [generate a random tree](https://www.grammaticalframework.org/doc/gf-shell-reference.html#toc15) and [linearize](https://www.grammaticalframework.org/doc/gf-shell-reference.html#toc19) it
 
 ## Part 2: morphology
-1. Design the morphological types of the major parts of speech (NOUN, ADJ, and VERB) in your selected language, i.e. identify their inflectional and inherent features using: a traditional grammar book or a Wikipedia article and/or data from [universaldependencies.org](https://universaldependencies.org/). In the latter case:
+1. Design the morphological types of the major parts of speech (NOUN, ADJ, and VERB) in your selected language, i.e. identify their inflectional and inherent features using: a traditional grammar book or a Wikipedia article __and/or__ data from [universaldependencies.org](https://universaldependencies.org/). In the latter case:
      1. download a treebank for your language
-     2. use [deptreepy](https://github.com/aarneranta/deptreepy/) or [STUnD](https://harisont.github.io/STUnD/) to query the treebank and look up what morphological features actually occur in the data for each POS
+     2. use [deptreepy](https://github.com/aarneranta/deptreepy/) or write your own script to query the treebank and look up what morphological features actually occur in the data for each POS
 2. Implement these in GF by defining parameters and writing a couple of paradigms. In this phase, you will work in the `MicroResXxx` module
-3. Define the `lincat`s for `N`,`A`,`V` and `V2` in `MicroLangEng`
-4. Test your GF morphology. To do that, you can import the grammar with the `-retain` flag and use the [`compute_concrete`](https://www.grammaticalframework.org/doc/gf-shell-reference.html#toc8) command on the various lexical items. For example `cc star_N` returns the full inflectional table for the noun "star"
+3. Test your GF morphology. To do that, you can import the grammar with the `-retain` flag and use the [`compute_concrete`](https://www.grammaticalframework.org/doc/gf-shell-reference.html#toc8) command on the various lexical items. For example `cc star_N` returns the full inflectional table for the noun "star"
 
 ## Part 3: syntax
 1. Define the linearization types of main phrasal categories - the remaining categories in `MicroLang`.
