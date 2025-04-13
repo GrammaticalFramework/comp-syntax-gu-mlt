@@ -15,8 +15,3 @@
 | zwarte kat | zwarte katten |
 | gato preto | gatos __pretos__ |
 | черная кошка | __черные__ кошки |
-
-## Number agreement in VPs
-
-- the black cat __runs__, the black cats __run__
-- den svarta katten springer, de svarta katter springer
