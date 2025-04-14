@@ -7,12 +7,15 @@ abstract Agreement = {
         Det ;
         
     fun
-        DetCN : Det -> CN -> NP ;   -- the black cat
+        DetCN : Det -> CN -> NP ;   -- this black cat
         AdjCN : A -> N -> CN ;      -- black cat
         UseN : N -> CN ;            -- cat
 
         cat_N : N ;
+        house_N : N ;
         black_A : A ;
-        the_Sg : Det ;
-        the_Pl : Det ;
+        big_A : A ;
+        -- simplification of pronouns just to make English interesting
+        this_Det : Det ;
+        these_Det : Det ;
 }

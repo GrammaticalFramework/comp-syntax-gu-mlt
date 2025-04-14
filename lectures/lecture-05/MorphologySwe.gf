@@ -7,10 +7,13 @@ param
   Number = Sg | Pl ;
 
   NForm = NF Number Definite Case ; -- NF is a constructor
-
+  NPAgreement = NPAgr Number Definite Gender ;
+   
 oper
 --  Noun = {s : Number => Definite => Case => Str ; g : Gender} ;
   Noun = {s : NForm => Str ; g : Gender} ;
+
+  Adjective = { s: NPAgreement => Str } ;
 
   mkNoun : (sin, sig, sdn, sdg, pin, pig, pdn, pdg : Str) -> Gender -> Noun =
     \sin, sig, sdn, sdg, pin, pig, pdn, pdg, g -> {
@@ -31,6 +34,19 @@ oper
     _ + ("s" | "x" | "z") => s ;
     _ => s + "s"
     } ;
+
+  mk3Adjective : (stor, stort, stora : Str) -> Adjective = \stor, stort, stora -> {
+    s = table {
+      NPAgr Sg Ind Com => stor ;
+      NPAgr Sg Ind Neut => stort ;
+      NPAgr Sg Def Com => stora ;
+      NPAgr Sg Def Neut => stora ;
+      NPAgr Pl Ind Com => stora ;
+      NPAgr Pl Ind Neut => stora ;
+      NPAgr Pl Def Com => stora ;
+      NPAgr Pl Def Neut => stora 
+    }
+  } ;
 
   mk4Noun : (sin, sdn, pin, pdn : Str) -> Noun =
     \sin, sdn, pin, pdn -> {
