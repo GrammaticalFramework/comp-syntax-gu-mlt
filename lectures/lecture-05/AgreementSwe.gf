@@ -4,16 +4,18 @@ concrete AgreementSwe of Agreement = open MorphologySwe in {
         CN = Noun ;
         N = Noun ;
         A = Adjective ;
-        Det = {s : Gender => Str; n: Number;} ; -- and possible Definiteness
+        Det = {s : Gender => Str; n: Number; d: Definite} ; -- and possible Definiteness
 
     lin
-       -- DetCN d cn = {
-       --     s = d.s ++ (cn.s ! d.n) ;
-       --     n = d.n ; 
-       -- } ;
-       -- AdjCN a cn = {
-       --     s = \\n => let agr ? ? cn.g  = NPAgr in (a.s ! agr) ++ (cn.s ! n) ;
-       -- } ;
+       DetCN d cn = {
+           s = (d.s ! cn.g) ++ (cn.s ! (NF d.n d.d Nom)) ;
+           a = NPAgr d.n d.d cn.g ; 
+       } ;
+        AdjCN a n = {
+            s = \\nf => let agr = NPAgr (nform2number nf) (nform2definite nf) n.g
+                        in (a.s ! agr) ++ (n.s ! nf) ; 
+            g = n.g
+        } ;
         UseN n = n ;
         
         cat_N = mk4Noun "katt" "katten" "katter" "katterna" ; 
@@ -34,6 +36,7 @@ concrete AgreementSwe of Agreement = open MorphologySwe in {
                 Neut => "de här" 
             };
             n = Pl ;
+            d = Def ;
         } ;
     
 }

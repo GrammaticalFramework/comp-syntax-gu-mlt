@@ -10,6 +10,14 @@ param
   NPAgreement = NPAgr Number Definite Gender ;
    
 oper
+  nform2number : NForm -> Number = \nf -> case nf of {
+    (NF n _ _) => n 
+  } ;
+
+  nform2definite : NForm -> Definite = \nf -> case nf of {
+    (NF _ d _) => d 
+  } ;
+
 --  Noun = {s : Number => Definite => Case => Str ; g : Gender} ;
   Noun = {s : NForm => Str ; g : Gender} ;
 
