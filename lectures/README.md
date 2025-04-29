@@ -125,6 +125,51 @@ Confirmed Swedish inflection table by looking up a word at https://svenska.se/ a
 Started MorphologyEng.gf and MorphologySwe.gf in lecture-03/.
 
 
+## Lecture 7
+
+We took a look at the RGL synopsis, https://www.grammaticalframework.org/lib/doc/synopsis/
+
+We focused on a few things:
+- the hierarchic view of categories (Chapter 1)
+- Sentence/Clause distinction, looking at "inflection tables" of clauses in https://cloud.grammaticalframework.org/minibar/minibar.html (ResourceDemo, startcat Cl)
+- verb valencies: V, V2, V3, VA, VV, etc and the "sense distinctions" that come with different valency patterns and also typically are translated with different words
+
+An examples of verb valencies, "look":
+- V: look ; titta
+- V2: look at ; titta på 
+- V2: look for ; leta efter
+- V2: look after ; ta hand om
+- V2 : look like ; se ut som
+- V3 : look up ; slå upp
+- VA: look (good) ; se (bra) ut
+
+We also briefly discussed complements vs. adjuncts and pointed out that they can be difficult to distinguish and that UD does not even try.
+
+
+## Lecture 8
+
+Installing RGL: a binary release can be found in
+
+https://github.com/GrammaticalFramework/gf-rgl/releases/tag/20250429
+
+Steps:
+1. Download rgl-20250429.tgz
+2. Put it into some good place, for instance ~/GF or /usr/local/lib
+3. Uncompress it with `tar xvfz`
+4. The top directory created is lib, with subdirectories alltenses, prelude, present. List them to see lots of .gfo files
+5. Export the absolute path to this lib as the value of the environment variable `GF_LIB_PATH`, which GF recognizes: `export GF_LIB_PATH=/Users/aarne/GF/lib` if this is where you have placed it.
+6. This export command can also be attached you your .bashrc or .zprofile, or whatever shell initialization file you have
+
+When you have done this, you can test if it works in the following way:
+```
+ $ gf
+ > i alltenses/LangEng.gfo
+ > gr -cat=Cl | l -table
+```
+We also looked at the source of the RGL, obtained by cloning https://github.com/GrammaticalFramework/gf-rgl
+The binaries can be compiled from this, if you need a Haskell compiler.
+If you don't have one, you can still keep the sources just for documentation.
+They can be imported in the GF program, but compiling the whole RGL is easier if you use `make install`, which requires Haskell.
 
 
 
