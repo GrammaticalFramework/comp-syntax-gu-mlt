@@ -8,9 +8,10 @@ from gf_utils import *
 
 """
 To collect labels from query.json (Wikidata query result) and extract grammars:
-python3 find_labels.py init >labels.jsonl
-python3 find_labels.py abstract >Labels.gf
-python3 find_labels.py en >LabelsEng.gf
+python3 find_labels.py init >../data/labels.jsonl
+python3 find_labels.py funs >../data/funs.jsonl
+python3 find_labels.py abstract >../data/Labels.gf
+python3 find_labels.py en >../data/LabelsEng.gf
 """
 
 WIKIDATA_FILE = '../data/query.json'
@@ -19,7 +20,7 @@ WIKIDATA_URL_PREFIX = 'http://www.wikidata.org/wiki/Special:EntityData/'
 NOBEL_FIELDS = ['award', 'country']
 LABEL_FILE = '../data/labels.jsonl'
 
-USAGE = 'usage: find_labels.py (init | abstract | en | sv | fi | ...)'
+USAGE = 'usage: find_labels.py (init | funs | abstract | en | sv | fi | ...)'
 
 if sys.argv[1:]:
     MODE = sys.argv[1]
@@ -78,7 +79,9 @@ def extract_labels(labeldata, mode):
         eng = labels.get('en', 'X')
         cat = labels['field'].capitalize()
         fun = mk_fun_from_strs([qid, eng, cat])
-        if mode == 'abstract':
+        if mode == 'funs':
+            print(json.dumps([qid, fun], ensure_ascii=False))
+        elif mode == 'abstract':
             print(mk_fun_rule(fun, cat))
         else:
             lin = labels.get(mode, labels.get('en', 'X'))

@@ -6,17 +6,20 @@ concrete NobelEng of Nobel = LabelsEng ** open
 in {
 
 lincat
-  Description = Text ;
+  Sentence = S ;
   Name = NP ;
   Date = Adv ;
 
 lin
-  LivingDescription name pron country birthdate awarddate award =
-    mkText
-      (mkPhr (mkS pastTense (mkCl name (mkVP (mkVP born_VP (inAdv country)) birthdate))))
-      (mkText (mkS pastTense (mkCl pron (mkVP (mkVP (mkV2 get_V) award) awarddate)))) ;
+  BornSentence name country date =
+    mkS pastTense (mkCl name (mkVP (mkVP born_VP (inAdv country)) date)) ;
+    
+  AwardSentence name award date =
+    mkS pastTense (mkCl name (mkVP (mkVP (mkV2 get_V) award) date)) ;
+      
+  DiedSentence name date =
+    mkS pastTense (mkCl name (mkVP die_VP date)) ;
 
---  PastDescription : Name -> Country -> Date -> Date -> Award -> Description ;
   StringName s = symb s ;
   
   YearDate i = inAdv <symb i : NP> ;
@@ -28,5 +31,6 @@ lin
 oper
   inAdv : NP -> Adv = \np -> SyntaxEng.mkAdv in_Prep np ;
   born_VP = mkVP (mkA "born") ;
+  die_VP = mkVP (mkV "die") ;
 
 }

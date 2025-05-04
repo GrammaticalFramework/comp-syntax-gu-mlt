@@ -9,7 +9,7 @@ oper mkCountry = overload {
   } ;
 
 oper mkAward = overload {
-  mkAward : Str -> NP = \s -> mkNP (mkPN s) ;
+  mkAward : Str -> NP = \s -> mkNP the_Det (mkN s) ;
   mkAward : NP -> NP = \np -> np ;
   } ;
 

@@ -1,15 +1,17 @@
 abstract Nobel = Labels ** {
 
-flags startcat = Description ;
+flags startcat = Sentence ;
 
 cat
-  Description ;
+  Sentence ;
   Name ;
   Date ;
 
 fun
-  LivingDescription : Name -> Name -> Country -> Date -> Date -> Award -> Description ;
-  PastDescription : Name -> Name -> Country -> Date -> Date -> Date -> Award -> Description ;
+  BornSentence : Name -> Country -> Date -> Sentence ;
+  AwardSentence : Name -> Award -> Date -> Sentence ;
+  DiedSentence : Name -> Date -> Sentence ;
+
   StringName : String -> Name ;
   YearDate : Int -> Date ;
   he_Name, she_Name, they_Name : Name ;
