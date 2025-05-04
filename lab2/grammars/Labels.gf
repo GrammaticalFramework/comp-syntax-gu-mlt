@@ -1,3 +1,7 @@
+abstract Labels = {
+cat Country ;
+cat Award ;
+
 fun Q800_Costa_Rica_Country : Country ; 
 fun Q219060_State_of_Palestine_Country : Country ; 
 fun Q37_Lithuania_Country : Country ; 
@@ -109,4 +113,5 @@ fun Q180114_Ayyubid_dynasty_Country : Country ;
 fun Q8733_Qing_dynasty_Country : Country ; 
 fun Q96_Mexico_Country : Country ; 
 fun Q884_South_Korea_Country : Country ; 
-fun Q114_Kenya_Country : Country ; 
+fun Q114_Kenya_Country : Country ;
+}

@@ -1,3 +1,19 @@
+concrete LabelsEng of Labels = open SyntaxEng, ParadigmsEng in {
+
+lincat Country = NP ;
+lincat Award = NP ;
+
+oper mkCountry = overload {
+  mkCountry : Str -> NP = \s -> mkNP (mkPN s) ;
+  mkCountry : NP -> NP = \np -> np ;
+  } ;
+
+oper mkAward = overload {
+  mkAward : Str -> NP = \s -> mkNP (mkPN s) ;
+  mkAward : NP -> NP = \np -> np ;
+  } ;
+
+
 lin Q800_Costa_Rica_Country = mkCountry "Costa Rica" ; 
 lin Q219060_State_of_Palestine_Country = mkCountry "State of Palestine" ; 
 lin Q37_Lithuania_Country = mkCountry "Lithuania" ; 
@@ -110,3 +126,5 @@ lin Q8733_Qing_dynasty_Country = mkCountry "Qing dynasty" ;
 lin Q96_Mexico_Country = mkCountry "Mexico" ; 
 lin Q884_South_Korea_Country = mkCountry "South Korea" ; 
 lin Q114_Kenya_Country = mkCountry "Kenya" ; 
+
+}
