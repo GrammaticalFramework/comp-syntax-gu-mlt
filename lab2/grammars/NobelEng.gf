@@ -15,7 +15,7 @@ lin
     mkS pastTense (mkCl name (mkVP (mkVP born_VP (inAdv country)) date)) ;
     
   AwardSentence name award date =
-    mkS pastTense (mkCl name (mkVP (mkVP (mkV2 get_V) award) date)) ;
+    mkS pastTense (mkCl name (mkVP (mkVP get_V2 award) date)) ;
       
   DiedSentence name date =
     mkS pastTense (mkCl name (mkVP die_VP date)) ;
@@ -32,5 +32,6 @@ oper
   inAdv : NP -> Adv = \np -> SyntaxEng.mkAdv in_Prep np ;
   born_VP = mkVP (mkA "born") ;
   die_VP = mkVP (mkV "die") ;
+  get_V2 = mkV2 get_V ;
 
 }
