@@ -53,7 +53,7 @@ def predicate(tree):
         case ("PFemale", []):
             return lambda d: d['sexLabel'] == 'female'
         case ("KProperty", [property, kind]):
-            return lambda d: predicate(property)(d) and predicate(kind(d))
+            return lambda d: predicate(property)(d) and predicate(kind)(d)
         case ("KLaureate", []):
             return lambda d: True
         case ("KMan", []):
@@ -85,9 +85,9 @@ def value(element):
             _, string = name.unpack
             return [d for d in data if d['personLabel'] == string][0]  ## uncertain !
         case ('EYoungest', [kind]):
-            return min(data, key = age)
+            return min([d for d in data if predicate(kind)(d)], key = age)
         case ('EOldest', [kind]):
-            return max(data, key = age)
+            return max([d for d in data if predicate(kind)(d)], key = age)
           
     print('not yet', str(tree))
 

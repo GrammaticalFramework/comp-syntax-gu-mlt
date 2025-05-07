@@ -78,6 +78,7 @@ def grammar_description(grammar, fundata, d, lang):
         died = pgf.readExpr(
             f"DiedSentence ({name(d)}) (YearDate {year(d['deathDate'])})")
         sentences.append(died)
+#    return ('\n '.join([str(s) for s in sentences]))
     return ' '.join([lang.linearize(s) + '.' for s in sentences])
 
 
@@ -90,6 +91,7 @@ if sys.argv[1:]:
 else:
     for d in data:
         print(template_description(d))
+
 
 
 

@@ -23,3 +23,8 @@ Replace da and Dan with your own language codes!
 
 More instructions and demos are given in the lectures of the week 5-9 May 2025.
 
+If you don't manage to install pgf, a quick way to test is, in GF,
+```
+ import NobelEng.gf
+ rf -file="../data/trees.gft" -lines -tree | l
+```
