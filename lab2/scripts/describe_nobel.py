@@ -4,6 +4,8 @@ import pgf
 
 # query: https://w.wiki/3tEM
 
+# usage: descri_nobel <lang> gender?
+
 DATA_FILE = '../data/query.json'
 WIKIDATA_PREFIX = 'http://www.wikidata.org/entity/'
 GRAMMAR_PREFIX = 'Nobel'
@@ -51,7 +53,15 @@ def template_description(d):
 
 def name(d):
     person = d['personLabel']
-    return f'StringName "{person}"'
+    if not sys.argv[2:]:
+        namefun = 'StringName'
+    elif pronoun(d) == 'she':
+        namefun = 'FemaleName'
+    elif pronoun(d) == 'he':
+        namefun = 'MaleName'
+    else:
+        namefun = 'StringName'
+    return f'{namefun} "{person}"'
 
 
 def funs(funfile):
@@ -78,8 +88,8 @@ def grammar_description(grammar, fundata, d, lang):
         died = pgf.readExpr(
             f"DiedSentence ({name(d)}) (YearDate {year(d['deathDate'])})")
         sentences.append(died)
-#    return ('\n '.join([str(s) for s in sentences]))
-    return ' '.join([lang.linearize(s) + '.' for s in sentences])
+    return ('\n '.join([str(s) for s in sentences]))
+#    return ' '.join([lang.linearize(s) + '.' for s in sentences])
 
 
 if sys.argv[1:]:

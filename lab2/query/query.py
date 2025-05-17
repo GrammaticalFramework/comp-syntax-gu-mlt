@@ -70,9 +70,9 @@ def quantifier(term):
         case ("TElement", element):
             return lambda p: p(value(element))
         case ("TAll", [kind]):
-            return lambda p: all(lambda x: not predicate(kind)(x) or p(x), data)
+            return lambda p: all([not predicate(kind)(x) or p(x) for x in data])
         case ("TAny", [kind]):
-            return lambda p: any(lambda x: predicate(kind)(x) and p(x), data)
+            return lambda p: any([predicate(kind)(x) and p(x) for x in data])
           
     print('not yet', str(tree))
 
