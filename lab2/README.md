@@ -27,7 +27,7 @@ If you don't manage to install pgf, a quick way to test is, in GF,
  rf -file="../data/trees.gft" -lines -tree | l
 ```
 
-## If you need gender agreement of nakes
+## If you need gender agreement of names
 
 (This note was added late, and is therefore not required at the 2025 course)
 
