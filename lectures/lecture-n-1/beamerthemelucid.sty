@@ -1,0 +1,187 @@
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% -------- COLOR SCHEME --------
+\definecolor{PrimaryColor}{RGB}{7,79,140} % primary color (blue)
+\definecolor{SecondaryColor}{RGB}{242,88,26} % bulleted lists
+\definecolor{BackgroundColor}{RGB}{255,255,255} % background & titles (white)
+\definecolor{TextColor}{RGB}{0,0,0} % text (black)
+\definecolor{ProgBarBGColor}{RGB}{175,175,175} % progress bar background (grey)
+
+
+% set colours
+\setbeamercolor{normal text}{fg=TextColor}\usebeamercolor*{normal text}
+\setbeamercolor{alerted text}{fg=PrimaryColor}
+\setbeamercolor{section in toc}{fg=PrimaryColor}
+\setbeamercolor{structure}{fg=SecondaryColor}
+\hypersetup{colorlinks,linkcolor=,urlcolor=SecondaryColor}
+
+% set fonts
+\setbeamerfont{itemize/enumerate body}{size=\large}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\small}
+
+% make pixelated bullets
+\setbeamertemplate{itemize item}{
+	\tikz{
+		\draw[fill=SecondaryColor,draw=none] (0, 0) rectangle(0.1, 0.1);
+		\draw[fill=SecondaryColor,draw=none] (0.1, 0.1) rectangle(0.2, 0.2);
+		\draw[fill=SecondaryColor,draw=none] (0, 0.2) rectangle(0.1, 0.3);
+	}
+}
+\setbeamertemplate{itemize subitem}{
+	\tikz{
+		\draw[fill=SecondaryColor,draw=none] (0, 0) rectangle(0.075, 0.075);
+		\draw[fill=SecondaryColor,draw=none] (0.075, 0.075) rectangle(0.15, 0.15);
+		\draw[fill=SecondaryColor,draw=none] (0, 0.15) rectangle(0.075, 0.225);
+	}
+}
+\setbeamertemplate{itemize subsubitem}{
+	\tikz{
+		\draw[fill=SecondaryColor,draw=none] (0.050, 0.050) rectangle(0.15, 0.15);
+	}
+}
+
+% disable navigation
+\setbeamertemplate{navigation symbols}{}
+
+% disable the damn default logo!
+\setbeamertemplate{sidebar right}{}
+
+% custom draw the title page above
+\setbeamertemplate{title page}{}
+
+% again, manually draw the frame title above
+\setbeamertemplate{frametitle}{}
+
+% disable "Figure:" in the captions
+% TODO: somehow this doesn't work for md-generated slides
+%\setbeamertemplate{caption}{\tiny\insertcaption}
+%\setbeamertemplate{caption label separator}{}
+
+% add some space below the footnotes so they don't end up on the progress bar
+\setbeamertemplate{footnote}{ 
+	\parindent 0em
+	\noindent 
+	\raggedright 
+	\hbox to 0.8em{\hfil\insertfootnotemark}
+	\insertfootnotetext
+	\par
+	\vspace{2em}
+}
+
+% add the same vspace both before and after quotes 
+\setbeamertemplate{quote begin}{\vspace{0.5em}}
+\setbeamertemplate{quote end}{\vspace{0.5em}}
+
+% progress bar counters
+\newcounter{showProgressBar}
+\setcounter{showProgressBar}{1}
+\newcounter{showSlideNumbers}
+\setcounter{showSlideNumbers}{1}
+\newcounter{showSlideTotal}
+\setcounter{showSlideTotal}{1}
+
+% use \makeatletter for our progress bar definitions
+% progress bar idea from http://tex.stackexchange.com/a/59749/44221
+% slightly adapted for visual purposes here
+\makeatletter
+\newcount\progressbar@tmpcounta% auxiliary counter
+\newcount\progressbar@tmpcountb% auxiliary counter
+\newdimen\progressbar@pbwidth %progressbar width
+\newdimen\progressbar@tmpdim % auxiliary dimension
+
+\newdimen\slidewidth % auxiliary dimension
+\newdimen\slideheight % auxiliary dimension
+
+% make the progress bar go across the screen
+\progressbar@pbwidth=\the\paperwidth
+\slidewidth=\the\paperwidth
+\slideheight=\the\paperheight
+
+% draw everything with tikz
+\setbeamertemplate{background}{ % all slides
+	% progress bar stuff
+	\progressbar@tmpcounta=\insertframenumber
+	\progressbar@tmpcountb=\inserttotalframenumber
+	\progressbar@tmpdim=\progressbar@pbwidth
+	\divide\progressbar@tmpdim by 100
+	\multiply\progressbar@tmpdim by \progressbar@tmpcounta
+	\divide\progressbar@tmpdim by \progressbar@tmpcountb
+	\multiply\progressbar@tmpdim by 100
+
+	\begin{tikzpicture}
+		% set up the entire slide as the canvas
+		\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+
+		% background
+		\fill[color=BackgroundColor] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+
+		\ifnum\thepage=1\relax % only title slides
+			% primary color rectangle
+			\fill[color=PrimaryColor] (0, 4cm) rectangle(\slidewidth,\slideheight);
+
+			% text (title, subtitle, author, date)
+			\node[anchor=south,text width=\slidewidth-1cm,inner xsep=0.5cm] at (0.5\slidewidth,4cm) {\color{BackgroundColor}\Huge\textbf{\inserttitle}};
+			\node[anchor=north east,text width=\slidewidth-1cm,align=right] at (\slidewidth-0.4cm,4cm) {\color{PrimaryColor}\large\textbf{\insertsubtitle}};
+			\node at (0.5\slidewidth,2cm) {\color{PrimaryColor}\LARGE\insertauthor};
+			\node at (0.5\slidewidth,1.25cm) {\color{PrimaryColor}\Large\insertinstitute};
+			\node[anchor=south east] at(\slidewidth,0cm) {\color{PrimaryColor}\tiny\insertdate};
+		\else % other slides
+			% title bar
+			\fill[color=PrimaryColor] (0, \slideheight-1cm) rectangle(\slidewidth,\slideheight);
+
+			% slide title
+			\node[anchor=north,text width=\slidewidth-0.75cm,inner xsep=0.5cm,inner ysep=0.25cm] at (0.5\slidewidth,\slideheight) {\color{BackgroundColor}\huge\textbf{\insertframetitle}};
+
+			% logo (TODO: autoscale; now it expects 350x350
+			\node[anchor=north east] at (\slidewidth-0.25cm,\slideheight+0.06cm){\insertlogo};
+
+			% show progress bar
+			\ifnum \value{showProgressBar}>0\relax%
+				% progress bar icon in the middle of the screen
+				\draw[fill=ProgBarBGColor,draw=none] (0cm,0cm) rectangle(\slidewidth,0.25cm);
+				\draw[fill=PrimaryColor,draw=none] (0cm,0cm) rectangle(\progressbar@tmpdim,0.25cm);
+
+				% bottom info
+				\node[anchor=south west] at(0cm,0.25cm) {\color{PrimaryColor}\tiny\vphantom{lp}\insertsection};
+				% if slide numbers are active
+				\ifnum \value{showSlideNumbers}>0\relax%
+					% if slide totals are active
+					\ifnum \value{showSlideTotal}>0\relax%
+						% draw both slide number and slide total
+						\node[anchor=south east] at(\slidewidth,0.25cm) {\color{PrimaryColor}\tiny\insertframenumber/\inserttotalframenumber};
+					\else
+						\node[anchor=south east] at(\slidewidth,0.25cm) {\color{PrimaryColor}\tiny\insertframenumber};
+					\fi
+				\fi
+			\else
+				% section title in the bottom left
+				\node[anchor=south west] at(0cm,0cm) {\color{PrimaryColor}\tiny\vphantom{lp}\insertsection};
+				% if we're showing slide numbers
+				\ifnum \value{showSlideNumbers}>0\relax%
+					% if slide totals are active
+					\ifnum \value{showSlideTotal}>0\relax%
+						% slide number and slide total
+						\node[anchor=south east] at(\slidewidth,0cm) {\color{PrimaryColor}\tiny\insertframenumber/\inserttotalframenumber};
+					\else
+						\node[anchor=south east] at(\slidewidth,0cm) {\color{PrimaryColor}\tiny\insertframenumber};
+					\fi
+				\fi
+			\fi
+		\fi
+	\end{tikzpicture}
+}
+\makeatother
+
+\AtBeginSection{\frame{\sectionpage}} % section pages
+\setbeamertemplate{section page}
+{
+	\begin{tikzpicture}
+		% set up the entire slide as the canvas
+		\useasboundingbox (0,0) rectangle(\slidewidth,\slideheight);
+		\fill[color=BackgroundColor] (-1cm, 2cm) rectangle (\slidewidth, \slideheight+0.1cm);
+		\fill[color=PrimaryColor] (-1cm, 0.5\slideheight-1cm) rectangle(\slidewidth, 0.5\slideheight+1cm);
+		\node[text width=\the\paperwidth-1cm,align=center] at (0.4\slidewidth, 0.5\slideheight) {\color{BackgroundColor}\Huge\textbf{\insertsection}};
+	\end{tikzpicture}
+}
