@@ -33,7 +33,7 @@ The only required fields are `ID`, `FORM`, `UPOS`, `HEAD` and `DEPREL`.
 
 In the end, you will submit two parallel CoNLL-U files, one containing the analyses of the source sentences and one for the analyses of the translations.
 
-To produce the CoNLL-U files, you may work in your text editor (if you use Visual Studio Code, you can use the [vscode-conllu](https://marketplace.visualstudio.com/items?itemName=lgrobol.vscode-conllu) to get syntax highlighting) or use a dedicated annotation tool such as [Arborator](https://arborator.grew.fr/#/).
+To produce the CoNLL-U files, you may work in your text editor (if you use Visual Studio Code, you can use the [vscode-conllu](https://marketplace.visualstudio.com/items?itemName=lgrobol.vscode-conllu) to get syntax highlighting), use a spreadsheet program and then export to TSV, or use a dedicated graphical annotation tool such as [Arborator](https://arborator.grew.fr/#/).
 
 If you work in your text editor, it might be easier to first write a simplified CoNLL-U, with just the fields `ID`, `FORM`, `UPOS`, `HEAD` and `DEPREL`, separated by tabs, and then expand it to full CoNLL-U with [this script](https://gist.github.com/harisont/612a87d20f729aa3411041f873367fa2) (or similar).
 

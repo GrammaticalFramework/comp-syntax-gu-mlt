@@ -1,0 +1,3 @@
+I will annotate this sentence in my text editor.
+We will use Arborator for the second sentence.
+The third and last sentence will be pre-annotated with UDPipe and we will just check that there are no errors.
