@@ -1,0 +1,51 @@
+<svg width="317"
+     height="115"
+     viewBox="0 0 317 115"
+     version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+  <text x="5" y="108" font-size="16">the</text>
+  <text x="42" y="108" font-size="16">black</text>
+  <text x="97" y="108" font-size="16">cat</text>
+  <text x="143" y="108" font-size="16">sees</text>
+  <text x="189" y="108" font-size="16">us</text>
+  <text x="235" y="108" font-size="16">now</text>
+  <text x="5" y="93" font-size="10">DET</text>
+  <text x="42" y="93" font-size="10">ADJ</text>
+  <text x="97" y="93" font-size="10">NOUN</text>
+  <text x="143" y="93" font-size="10">VERB</text>
+  <text x="189" y="93" font-size="10">PRON</text>
+  <text x="235" y="93" font-size="10">ADV</text>
+  <path d="M 17 80 Q 17 47 50 47 L 72 47 Q 105 47 105 80"
+        stroke="black"
+        fill="none"/>
+  <line x1="17" y1="75" x2="17" y2="80" stroke="black"/>
+  <path d="M 17 80 14 74 20 74"/>
+  <text x="54" y="42" font-size="10">det</text>
+  <path d="M 55 80 Q 55 63 71 63 L 88 63 Q 104 63 104 80"
+        stroke="black"
+        fill="none"/>
+  <line x1="55" y1="75" x2="55" y2="80" stroke="black"/>
+  <path d="M 55 80 52 74 58 74"/>
+  <text x="71" y="58" font-size="10">amod</text>
+  <path d="M 110 80 Q 110 63 127 63 L 133 63 Q 150 63 150 80"
+        stroke="black"
+        fill="none"/>
+  <line x1="110" y1="75" x2="110" y2="80" stroke="black"/>
+  <path d="M 110 80 107 74 113 74"/>
+  <text x="119" y="58" font-size="10">nsubj</text>
+  <line x1="158" y1="20" x2="158" y2="80" stroke="black"/>
+  <path d="M 158 80 155 74 161 74"/>
+  <text x="163" y="28" font-size="10">root</text>
+  <path d="M 166 80 Q 166 63 183 63 L 189 63 Q 206 63 206 80"
+        stroke="black"
+        fill="none"/>
+  <line x1="206" y1="75" x2="206" y2="80" stroke="black"/>
+  <path d="M 206 80 203 74 209 74"/>
+  <text x="179" y="58" font-size="10">obj</text>
+  <path d="M 165 80 Q 165 47 198 47 L 220 47 Q 253 47 253 80"
+        stroke="black"
+        fill="none"/>
+  <line x1="253" y1="75" x2="253" y2="80" stroke="black"/>
+  <path d="M 253 80 250 74 256 74"/>
+  <text x="195" y="42" font-size="10">advmod</text>
+</svg>

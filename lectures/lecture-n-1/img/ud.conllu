@@ -1,0 +1,6 @@
+1	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	TokenRange=0:3
+2	black	black	ADJ	JJ	Degree=Pos	3	amod	_	TokenRange=4:9
+3	cat	cat	NOUN	NN	Number=Sing	4	nsubj	_	TokenRange=10:13
+4	sees	see	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	TokenRange=14:18
+5	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	4	obj	_	TokenRange=19:21
+6	now	now	ADV	RB	PronType=Dem	4	advmod	_	SpaceAfter=No|TokenRange=22:25
