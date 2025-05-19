@@ -20,6 +20,7 @@ Sequence $\to$ structure, e.g.
 - natural language sentence $\to$ syntax tree
 - code $\to$ AST
 - argumentative essay $\to$ argumentative structure
+- ...
 
 ## Example (argmining)
 
@@ -33,7 +34,7 @@ Sequence $\to$ structure, e.g.
 # Syntactic parsing
 
 ## From sentence to tree
-From Jurafsky & Martin. _Speech and Language Processing_, chapter 18 (January 2024 draft):
+From chapter 18 of _Speech and Language Processing_, (Jurafsky & Martin, January 2024 draft):
 
 > Syntactic parsing is the task of assigning a syntactic structure to a sentence
 
@@ -57,8 +58,8 @@ we_Pron)) now_Adv)
 
 ## Example (GF)
 ```haskell
-PredVPS (
-    DetCN 
+PredVPS 
+    (DetCN 
         the_Det 
         (AdjCN (PositA black_A) (UseN cat_N))
     ) 
@@ -87,7 +88,7 @@ PredVPS (
 ```
 
 ## Two paradigms
-- __graph-based algorithms__: find the optimal tree from the set of all possible candidate solutions or a subset of it
+- __graph-based algorithms__: find the optimal tree from the set of all possible candidate solutions (or a subset of it)
 - __transition-based algorithms__: incrementally build a tree by solving a sequence of classification problems
 
 ## Graph-based approaches
@@ -99,8 +100,13 @@ $$\hat{t} = \underset{t \in T(s)}{argmax}\, score(s,t)$$
 - $T(s)$: set of candidate trees for $s$ 
 
 ## Complexity
+Depends on:
+
 - choice of $T$ (upper bound: $n^{n-1}$, where $n$ is the number of words in $s$)
-- scoring function (in the __arc-factor model__, the score of a tree is the sum of the score of each edge, scored individually by a NN. This results in $O(n^3)$ complexity)
+- scoring function (in the __arc-factor model__, the score of a tree is the sum of the score of each edge, scored individually by a NN)
+
+
+In practice: $O(n^3)$ complexity
 
 ## Transition-based approaches
 - trees are built through a sequence of steps, called _transitions_
@@ -120,19 +126,23 @@ $$\hat{t} = \underset{t \in T(s)}{argmax}\, score(s,t)$$
 # Specifics of UD parsing
 
 ## Not just parsing per se
-UD "parsers" typically do a lot more than just dependency parsing:
+UD "parsers" typically do a lot more than dependency parsing:
 
+- sentence segmentation
+- tokenization
 - lemmatization (`LEMMA` column)
 - POS tagging (`UPOS` + `XPOS`)
 - morphological tagging (`FEATS`)
 - ...
 
+Sometimes, some of these tasks are performed __jointly__ to achieve better performance.
+
 ## Evaluation (UD-specific)
 Some more specific metrics:
 
-- CLAS (Content-word LAS): LAS limited to content words
-- MLAS (Morphology-Aware LAS): CLAS that also uses the `FEATS` column
-- BLEX (Bi-Lexical dependency score): CLAS that also uses the `LEMMA` column
+- __CLAS__ (Content-word LAS): LAS limited to content words
+- __MLAS__ (Morphology-Aware LAS): CLAS that also uses the `FEATS` column
+- __BLEX__ (Bi-Lexical dependency score): CLAS that also uses the `LEMMA` column
 
 ## Evaluation script output
 \small
@@ -155,20 +165,40 @@ BLEX       |     88.50 |     88.34 |     88.42 |     88.34
 ```
 
 ## Three generations of parsers
-1. __MaltParser__ (Nivre et al., 2006): "classic" transition-based parser, data-driven but not NN-based
-2. __UDPipe__: neural transition-based parser; personal favorite
-   - version 1 (Straka et al. 2016): solid and fast software, available anywhere
-   - version 2 (Straka et al. 2018): much better performance, but slower and only available through an API
-3. __MaChAmp__ (van der Goot et al., 2021): transformer-based toolkit for multi-task learning, works on all CoNNL-like data, close to the SOTA, relatively easy to install and train
+(all transition-based)
+
+1. __MaltParser__ (Nivre et al. 2006): "classic" transition-based parser, data-driven but not NN-based
+2. __UDPipe__: neural parser, personal favorite
+   - v1 (Straka et al. 2016): fast, solid software, easy to install and available anywhere
+   - v2 (Straka et al. 2018): much better results but slower and only available through an API/via the web GUI
+3. __MaChAmp__ (van der Goot et al. 2021): transformer-based toolkit for multi-task learning, works on all CoNNL-like data, close to the SOTA, relatively easy to install and train
+
+## MaChAmp config example
+```json
+{"compsyn": {
+    "train_data_path": "PATH-TO-YOUR-TRAIN-SPLIT",
+    "dev_data_path": "PATH-TO-YOUR-DEV-SPLIT",
+    "word_idx": 1,
+    "tasks": {
+        "upos": {
+            "task_type": "seq",
+            "column_idx": 3
+        },
+        "dependency": {
+            "task_type": "dependency",
+            "column_idx": 6}}}}
+```
 
 ## Your task (lab 3)
 ![](img/machamp.png)
 
-1. annotate a small treebank for your language of choice (started)
-2. train a parser-tagger with MaChAmp on a reference UD treebank (tomorrow: installation)
+1. annotate a small treebank for your language of choice (started yesterday)
+2. train a parser-tagger on a reference UD treebank (tomorrow, or who knows maybe even today: installation)
 3. evaluate it on your treebank
 
-## Sources/further reading
+# Sources/further reading
+
+## Main sources
 - chapters 18-19 of the January 2024 draft of _Speech and Language Processing_ (Jurafsky & Martin) (full text available [__here__](https://web.stanford.edu/~jurafsky/slp3/))
 - unit 3-2 of Johansson & Kuhlmann's course "Deep Learning for Natural Language Processing" (slides and videos available __[__here__](https://liu-nlp.ai/dl4nlp/modules/module3/)__)
 - section 10.9.2 on parser evaluation from Aarne's course notes (on Canvas or [__here__](https://www.cse.chalmers.se/~aarne/grammarbook.pdf))
