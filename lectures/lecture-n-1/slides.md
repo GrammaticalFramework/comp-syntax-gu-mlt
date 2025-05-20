@@ -196,15 +196,24 @@ BLEX       |     88.50 |     88.34 |     88.42 |     88.34
 2. __train a parser-tagger on a reference UD treebank__ (tomorrow, or maybe even today: installation)
 3. evaluate it on your treebank
 
-# Sources/further reading
+# To learn more
 
 ## Main sources
 - chapters 18-19 of the January 2024 draft of _Speech and Language Processing_ (Jurafsky & Martin) (full text available [__here__](https://web.stanford.edu/~jurafsky/slp3/))
-- unit 3-2 of Johansson & Kuhlmann's course "Deep Learning for Natural Language Processing" (slides and videos available __[__here__](https://liu-nlp.ai/dl4nlp/modules/module3/)__)
-- section 10.9.2 on parser evaluation from Aarne's course notes (on Canvas or [__here__](https://www.cse.chalmers.se/~aarne/grammarbook.pdf))
+- unit 3-2 of Johansson & Kuhlmann's course "Deep Learning for Natural Language Processing" ([__slides and videos__](https://liu-nlp.ai/dl4nlp/modules/module3/)__)
+- section 10.9.2 on parser evaluation from Aarne's course notes (on Canvas)
 
 ## Papers describing the parsers
-- _MaltParser: A Data-Driven Parser-Generator for Dependency Parsing_ (Nivre et al. 2006) (PDF [__here__](http://lrec-conf.org/proceedings/lrec2006/pdf/162_pdf.pdf))
-- _UDPipe: Trainable Pipeline for Processing CoNLL-U Files Performing Tokenization, Morphological Analysis, POS Tagging and Parsing_ (Straka et al. 2016) (PDF [__here__](https://aclanthology.org/L16-1680.pdf))
-- _UDPipe 2.0 Prototype at CoNLL 2018 UD Shared Task_ (Straka et al. 2018) (PDF [__here__](https://aclanthology.org/K18-2020.pdf))
-- _Massive Choice, Ample Tasks (MACHAMP): A Toolkit for Multi-task Learning in NLP_ (van der Goot et al., 2021) (PDF [__here__](https://arxiv.org/pdf/2005.14672))
+- _MaltParser: A Data-Driven Parser-Generator for Dependency Parsing_ (Nivre et al. 2006) ([__PDF__](http://lrec-conf.org/proceedings/lrec2006/pdf/162_pdf.pdf))
+- _UDPipe: Trainable Pipeline for Processing CoNLL-U Files Performing Tokenization, Morphological Analysis, POS Tagging and Parsing_ (Straka et al. 2016) ([__PDF__](https://aclanthology.org/L16-1680.pdf))
+- _UDPipe 2.0 Prototype at CoNLL 2018 UD Shared Task_ (Straka et al. 2018) ([__PDF__](https://aclanthology.org/K18-2020.pdf))
+- _Massive Choice, Ample Tasks (MACHAMP): A Toolkit for Multi-task Learning in NLP_ (van der Goot et al., 2021) ([__PDF__](https://arxiv.org/pdf/2005.14672))
+
+## CSE courses you may like
+1. [DIT231](https://www.gu.se/en/study-gothenburg/programming-language-technology-dit231) Programming language technology
+   - build a complete compiler
+2. [DIT301](https://www.gu.se/en/study-gothenburg/compiler-construction-dit301) Compiler construction 
+   - the hardcore version of 1.
+   - build another compiler _and optimize it_
+3. DIT247 Machine learning for NLP (?)
+   - has a module on dependency parsing similar to the one in "Deep Learning for Natural Language Processing"
