@@ -193,7 +193,7 @@ BLEX       |     88.50 |     88.34 |     88.42 |     88.34
 ![](img/machamp.png)
 
 1. annotate a small treebank for your language of choice (started yesterday)
-2. train a parser-tagger on a reference UD treebank (tomorrow, or who knows maybe even today: installation)
+2. __train a parser-tagger on a reference UD treebank__ (tomorrow, or maybe even today: installation)
 3. evaluate it on your treebank
 
 # Sources/further reading
