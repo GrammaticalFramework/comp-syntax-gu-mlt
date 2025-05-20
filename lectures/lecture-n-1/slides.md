@@ -200,7 +200,7 @@ BLEX       |     88.50 |     88.34 |     88.42 |     88.34
 
 ## Main sources
 - chapters 18-19 of the January 2024 draft of _Speech and Language Processing_ (Jurafsky & Martin) (full text available [__here__](https://web.stanford.edu/~jurafsky/slp3/))
-- unit 3-2 of Johansson & Kuhlmann's course "Deep Learning for Natural Language Processing" ([__slides and videos__](https://liu-nlp.ai/dl4nlp/modules/module3/)__)
+- unit 3-2 of Johansson & Kuhlmann's course "Deep Learning for Natural Language Processing" ([__slides and videos__](https://liu-nlp.ai/dl4nlp/modules/module3/))
 - section 10.9.2 on parser evaluation from Aarne's course notes (on Canvas)
 
 ## Papers describing the parsers
