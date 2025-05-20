@@ -77,11 +77,11 @@ For more information, see [here](https://github.com/machamp-nlp/machamp/issues/4
 
    `source ENVNAME/bin/activate` (Linux/MacOS), or
 
-   `ENVNAME/Scripts/activate.bat` (Windows)
+   `ENVNAME\Scripts\activate.bat` (Windows)
 2. clone [the MaChAmp repository](https://github.com/machamp-nlp/machamp), move inside it and run 
-  ```
-  pip3 install -r requirements.txt
-  ```
+   ```
+   pip3 install -r requirements.txt
+   ```
 
 ### Step 2: preparing the training and development data
 Choose a UD treebank for one of the two languages you annotated in [part 1](#part-1-ud-annotation) and download it. 
