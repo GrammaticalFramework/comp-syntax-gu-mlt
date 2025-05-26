@@ -75,7 +75,6 @@ correction_label="L-Ref">Den</w> <w ref="3">är</w>
 | English      | ESL      | 5124          | retired\*   | **yes**        |
 | English      | ESLSpok  | 2320          | released    | no             |
 | Italian      | Valico   | 398           | released    | **yes**        |
-|              |          |               |             |                |
 | Korean       | KSL      | 12977         | released    | no             |
 | Russian      | ?        | 500           | WIP | **yes**        |
 | \color{SecondaryColor}Swedish | \color{SecondaryColor}SweLL | \color{SecondaryColor}\~5000 | \color{SecondaryColor}WIP | \color{SecondaryColor}**yes** |
@@ -635,4 +634,4 @@ __SweLL-gold__, aka the Swedish Learner Language corpus:
 
 ## To appear
 - \small Arianna Masciolini, Herbert Lange and Márton A Tóth. _Exploring parallel corpora with STUnD: a Search Tool for Universal Dependencies_. In the upcoming Huminfra Handbook, Gothenburg, Sweden, __most likely__ 2025
-- \small a paper about harmonization of UD guidelines for L2 treebanks 
+- \small a paper about harmonization of UD guidelines for L2 treebanks (under review)
