@@ -71,8 +71,17 @@ With deptreepy, you will need to issue the command
 
 which creates an HTML file you can open in you web browser.
 
-If you can visualize your trees with any of these tools, it means that they are in valid CoNLL-U format.
-If you want to check for more subtle errors, you can try to download and run [the official UD validator](https://github.com/UniversalDependencies/tools/blob/master/validate.py).
+If you can visualize your trees with any of these tools, that's a very good sign that your file _more or less_ matches the CoNNL-U format!
+
+As a last step, validate your treebank with the official UD validator. 
+
+To do that, clone or download the [UD tools repository](https://github.com/UniversalDependencies/tools), move inside the corresponding folder and run
+
+```
+python PATH-TO-YOUR-TREEBANK.conllu --lang=2-LETTER-LANGCODE-FOR-YOUR-LANGUAGE --level=1
+```
+
+If you want to check for more subtle errors, you can [go up a few levels](https://harisont.github.io/gfaqs.html#ud-validator).
 
 Submit the two CoNLL-U files on Canvas.
 
