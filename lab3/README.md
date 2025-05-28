@@ -74,7 +74,6 @@ which creates an HTML file you can open in you web browser.
 If you can visualize your trees with any of these tools, that's a very good sign that your file _more or less_ matches the CoNNL-U format!
 
 As a last step, validate your treebank with the official UD validator. 
-
 To do that, clone or download the [UD tools repository](https://github.com/UniversalDependencies/tools), move inside the corresponding folder and run
 
 ```
