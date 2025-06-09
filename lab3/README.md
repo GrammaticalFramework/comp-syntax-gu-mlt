@@ -77,7 +77,7 @@ As a last step, validate your treebank with the official UD validator.
 To do that, clone or download the [UD tools repository](https://github.com/UniversalDependencies/tools), move inside the corresponding folder and run
 
 ```
-python PATH-TO-YOUR-TREEBANK.conllu --lang=2-LETTER-LANGCODE-FOR-YOUR-LANGUAGE --level=1
+python validate.py PATH-TO-YOUR-TREEBANK.conllu --lang=2-LETTER-LANGCODE-FOR-YOUR-LANGUAGE --level=1
 ```
 
 If you want to check for more subtle errors, you can [go up a few levels](https://harisont.github.io/gfaqs.html#ud-validator).
