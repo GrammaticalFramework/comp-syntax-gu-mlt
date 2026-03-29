@@ -6,7 +6,7 @@ The:<DET> study:<NOUN> of:<ADP> volcanoes:<NOUN> is:<AUX> called:<VERB> volcanol
 It:<PRON> was:<AUX> conducted:<VERB> just:<ADV> off:<ADP> the:<DET> Mexican:<ADJ> coast:<NOUN> from:<ADP> April:<PROPN> to:<ADP> June:<PROPN> .:<PUNCT>
 ":<PUNCT> Her:<PRON> voice:<NOUN> literally:<ADV> went:<VERB> around:<ADP> the:<DET> world:<NOUN> ,:<PUNCT> ":<PUNCT> Leive:<PROPN> said:<VERB> .:<PUNCT>
 A:<DET> witness:<NOUN> told:<VERB> police:<NOUN> that:<SCONJ> the:<DET> victim:<NOUN> had:<AUX> attacked:<VERB> the:<DET> suspect:<NOUN> in:<ADP> April:<PROPN> .:<PUNCT>
-It:<PRON> 's:<AUX> most:<ADV> obvious:<ADJ> when:<SSUBJ> a:<DET> celebrity:<NOUN> 's:<PART> name:<NOUN> is:<AUX> initially:<ADV> quite:<ADV> rare:<ADJ> .:<PUNCT>
+It:<PRON> 's:<AUX> most:<ADV> obvious:<ADJ> when:<SCONJ> a:<DET> celebrity:<NOUN> 's:<PART> name:<NOUN> is:<AUX> initially:<ADV> quite:<ADV> rare:<ADJ> .:<PUNCT>
 This:<PRON> has:<AUX> not:<PART> stopped:<VERB> investors:<NOUN> flocking:<VERB> to:<PART> put:<VERB> their:<PRON> money:<NOUN> in:<ADP> the:<DET> funds:<NOUN> .:<PUNCT>
 This:<DET> discordance:<NOUN> between:<ADP> economic:<ADJ> data:<NOUN> and:<CCONJ> political:<ADJ> rhetoric:<NOUN> is:<AUX> familiar:<ADJ> ,:<PUNCT> or:<CCONJ> should:<AUX> be:<AUX> .:<PUNCT>
 The:<DET> feasibility:<NOUN> study:<NOUN> estimates:<VERB> that:<SCONJ> it:<PRON> would:<AUX> take:<VERB> passengers:<NOUN> about:<ADV> four:<NUM> minutes:<NOUN> to:<PART> cross:<VERB> the:<DET> Potomac:<PROPN> River:<PROPN> on:<ADP> the:<DET> gondola:<NOUN> .:<PUNCT>
