@@ -1,0 +1,19 @@
+S ::= NP_nom_sg VP_sg ;
+S ::= NP_nom_pl VP_pl ;
+VP_sg ::= V_sg NP_acc ;
+VP_pl ::= V_pl NP_acc ;
+NP_nom_sg ::= Det CN ;
+NP_acc ::= Det CN ;
+CN ::= A CN ;
+CN ::= N ;
+NP_nom_pl ::= Pron_nom_pl ;
+NP_acc ::= Pron_acc ;
+
+Det ::= "the" ;
+A ::= "black" ;
+N ::= "cat" ;
+V_sg ::= "sees" ;
+V_pl ::= "see" ;
+Pron_nom_pl ::= "we" ;
+Pron_acc ::= "us" ;
+
