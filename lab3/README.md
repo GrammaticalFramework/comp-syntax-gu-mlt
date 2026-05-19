@@ -61,6 +61,12 @@ but for this assignment lines like
 
 are perfectly acceptable too.
 
+Useful links:
+
+- [docs](https://universaldependencies.org/guidelines.html)
+- [treebank query tool](https://universal.grew.fr)
+- [UDPipe](https://lindat.mff.cuni.cz/services/udpipe/) (recommended, but not from the very beginning: annotate some sentences by hand first)
+
 ### Step 4: make sure your files match the CoNLL-U specification
 Check your treebank with the official UD validator. 
 To do that, clone or download the [UD tools repository](https://github.com/UniversalDependencies/tools), move inside the corresponding folder and run
