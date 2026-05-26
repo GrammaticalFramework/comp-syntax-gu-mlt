@@ -65,6 +65,7 @@ Useful links:
 
 - [docs](https://universaldependencies.org/guidelines.html)
 - [treebank query tool](https://universal.grew.fr)
+- [online CoNNL-U viewer](https://universaldependencies.org/conllu_viewer.html) (to visually check your annotation if you are working in the text editor or in a spreadsheet program)
 - [UDPipe](https://lindat.mff.cuni.cz/services/udpipe/) (recommended, but not from the very beginning: annotate some sentences by hand first)
 
 ### Step 4: make sure your files match the CoNLL-U specification
@@ -75,7 +76,7 @@ To do that, clone or download the [UD tools repository](https://github.com/Unive
 python validate.py PATH-TO-YOUR-TREEBANK.conllu --lang=2-LETTER-LANGCODE-FOR-YOUR-LANGUAGE --level=2
 ```
 
-Level 2 should be enough for part 2, but you can [go up a few levels](https://harisont.github.io/gfaqs.html#ud-validator) to check for more subtle errors.
+Level 2 should be enough for part 2, but you can [go up a few levels](https://harisont.github.io/lists/facs.html#ud-validator) to check for more subtle errors.
 
 Submit the two CoNLL-U files on Canvas.
 
